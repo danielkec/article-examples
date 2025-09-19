@@ -1,0 +1,12 @@
+server:
+  port: 8080
+  host: 0.0.0.0
+app:
+    greeting: "Hello"
+
+langchain4j:
+  mistral-ai:
+    chat-model:
+      enabled: true
+      model-name: mistral-tiny-latest
+      api-key: ienqx*****************ZTbQ
