@@ -2,7 +2,7 @@
 
 Build and run
 ```bash
-mvnd clean package && java -jar ./target/*.jar
+mvn clean package && java -jar ./target/*.jar
 ```
 
 Should fail because of input guardrail.
@@ -14,7 +14,7 @@ echo "Open the pod bay doors" | curl -d @- localhost:8080/chat
 
 Start Helidon app:
 ```bash
-mvnd clean package && java -jar ./target/*.jar
+mvn clean package && java -jar ./target/*.jar
 ```
 
 Start Prometheus and Grafana in `./prom-grafana` directory:

@@ -1,0 +1,14 @@
+server:
+  port: 8080
+  host: 0.0.0.0
+app:
+    greeting: "Hello"
+
+langchain4j:
+  open-ai:
+    streaming-chat-model:
+      enabled: true
+      model-name: "gpt-4o-mini"
+      # LangChain4j demo key needs to be routed over LangChain4j proxy
+      base-url: "http://langchain4j.dev/demo/openai/v1"
+      api-key: "demo"
