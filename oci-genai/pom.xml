@@ -10,7 +10,7 @@
         <relativePath/>
     </parent>
     <groupId>me.daniel-helidon</groupId>
-    <artifactId>lc4-guardrails</artifactId>
+    <artifactId>oci-genai</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
@@ -18,6 +18,25 @@
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>io.helidon.integrations.langchain4j</groupId>
+            <artifactId>helidon-integrations-langchain4j</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.helidon.integrations.langchain4j.providers</groupId>
+            <artifactId>helidon-integrations-langchain4j-providers-oci-genai</artifactId>
+        </dependency>
+        <!-- Jakartified OCI SDK HTTP client -->
+        <dependency>
+            <groupId>com.oracle.oci.sdk</groupId>
+            <artifactId>oci-java-sdk-common-httpclient-jersey3</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.helidon.integrations.oci</groupId>
+            <artifactId>helidon-integrations-oci</artifactId>
+        </dependency>
+
         <dependency>
             <groupId>io.helidon.webserver</groupId>
             <artifactId>helidon-webserver</artifactId>
@@ -57,16 +76,24 @@
             <scope>runtime</scope>
         </dependency>
         <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-jdk14</artifactId>
+            <groupId>io.helidon.webclient</groupId>
+            <artifactId>helidon-webclient</artifactId>
+            <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>io.helidon.integrations.langchain4j</groupId>
-            <artifactId>helidon-integrations-langchain4j</artifactId>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>io.helidon.integrations.langchain4j.providers</groupId>
-            <artifactId>helidon-integrations-langchain4j-providers-open-ai</artifactId>
+            <groupId>org.hamcrest</groupId>
+            <artifactId>hamcrest-all</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.helidon.webserver.testing.junit5</groupId>
+            <artifactId>helidon-webserver-testing-junit5</artifactId>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 

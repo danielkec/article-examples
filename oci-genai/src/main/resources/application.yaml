@@ -1,0 +1,13 @@
+server:
+  port: 8080
+  host: 0.0.0.0
+app:
+    greeting: "Hello"
+
+langchain4j:
+  oci-gen-ai:
+    chat-model:
+      enabled: true
+      region: "us-chicago-1"
+      compartment-id: "ocid1.tenancy.oc1..aaaaaaaaonou***************"
+      model-name: "xai.grok-4"
